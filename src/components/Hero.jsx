@@ -2,8 +2,8 @@ import heroImage from '../assets/btc/hero-house.jpg'
 
 function Hero() {
   return (
-    <section id="home" className="bg-white pt-32 sm:pt-36">
-      <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 pb-20 pt-8 lg:grid-cols-2 lg:px-8 lg:pb-24">
+    <section id="home" className="bg-white pt-24 sm:pt-28">
+      <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 pb-20 pt-2 lg:grid-cols-2 lg:px-8 lg:pb-24 lg:pt-4">
         <div className="fade-up">
           <p className="mb-5 inline-flex rounded-2xl bg-lightGrey px-5 py-2 text-sm font-semibold text-accentOrange">
             Trusted Construction & Renovation Experts
