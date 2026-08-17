@@ -13,7 +13,7 @@ const features = [
 
 function WhyChooseUs() {
   return (
-    <section className="bg-lightGrey py-24">
+    <section className="bg-darkGrey py-24">
       <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 md:grid-cols-2 lg:px-8">
         <div className="fade-up grid grid-cols-2 gap-4">
           <img
@@ -38,7 +38,10 @@ function WhyChooseUs() {
           </div>
         </div>
         <div className="fade-up">
-          <h2 className="text-4xl font-extrabold leading-tight text-darkGrey sm:text-5xl">
+          <p className="mb-4 inline-flex rounded-2xl bg-white/10 px-5 py-2 text-sm font-semibold text-accentOrange">
+            Built for confidence
+          </p>
+          <h2 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl">
             Why Clients Choose Better the Best
           </h2>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2">

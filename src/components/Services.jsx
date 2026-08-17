@@ -6,37 +6,49 @@ import {
   FiPenTool,
   FiTool,
 } from 'react-icons/fi'
+import serviceResidential from '../assets/btc/project-house.jpg'
+import serviceCommercial from '../assets/btc/project-office.jpg'
+import serviceRenovation from '../assets/btc/gallery-04.jpg'
+import serviceAdvisory from '../assets/btc/about-site.jpg'
+import serviceFinishing from '../assets/btc/why-interior.jpg'
+import serviceSupervision from '../assets/btc/gallery-01.jpg'
 
 const services = [
   {
     icon: FiHome,
     name: 'Residential Construction',
     description: 'Homes, apartments, and residential projects.',
+    image: serviceResidential,
   },
   {
     icon: FiBriefcase,
     name: 'Commercial Construction',
     description: 'Shops, offices, and commercial buildings.',
+    image: serviceCommercial,
   },
   {
     icon: FiTool,
     name: 'Renovation & Remodeling',
     description: 'Upgrade and transform existing spaces.',
+    image: serviceRenovation,
   },
   {
     icon: FiClipboard,
     name: 'Construction Advisory',
     description: 'Professional guidance for your project.',
+    image: serviceAdvisory,
   },
   {
     icon: FiPenTool,
     name: 'Interior & Exterior Finishing',
     description: 'Painting, flooring, ceilings, and finishing.',
+    image: serviceFinishing,
   },
   {
     icon: FiLayers,
     name: 'Site Supervision',
     description: 'Ensure quality, safety, and timely delivery.',
+    image: serviceSupervision,
   },
 ]
 
@@ -57,13 +69,19 @@ function Services() {
             return (
               <article
                 key={service.name}
-                className="fade-up rounded-3xl border border-transparent bg-white p-8 shadow-lg transition duration-300 hover:-translate-y-[6px] hover:border-accentOrange hover:shadow-2xl"
+                className="fade-up group overflow-hidden rounded-3xl border border-transparent bg-white shadow-lg transition duration-300 hover:-translate-y-[6px] hover:border-accentOrange hover:shadow-2xl"
               >
-                <div className="mb-6 inline-flex rounded-2xl bg-lightGrey p-4 text-accentOrange">
-                  <Icon size={28} aria-hidden="true" />
+                <div className="relative h-44 overflow-hidden">
+                  <img src={service.image} alt={`${service.name} service example`} className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-darkGrey/70 to-transparent" />
+                  <div className="absolute bottom-4 left-4 inline-flex rounded-2xl bg-white p-4 text-accentOrange shadow-lg">
+                    <Icon size={28} aria-hidden="true" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-darkGrey">{service.name}</h3>
-                <p className="mt-3 font-medium leading-7 text-primaryGrey">{service.description}</p>
+                <div className="p-8">
+                  <h3 className="text-xl font-bold text-darkGrey">{service.name}</h3>
+                  <p className="mt-3 font-medium leading-7 text-primaryGrey">{service.description}</p>
+                </div>
               </article>
             )
           })}
