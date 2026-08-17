@@ -10,6 +10,7 @@ import Testimonials from './components/Testimonials'
 import CTA from './components/CTA'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ImageLightbox from './components/ImageLightbox'
 import { FiMessageCircle } from 'react-icons/fi'
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
       >
         <FiMessageCircle size={28} aria-hidden="true" />
       </a>
+      <ImageLightbox />
       <Footer />
     </>
   )

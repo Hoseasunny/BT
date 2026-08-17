@@ -1,6 +1,7 @@
 import heroImage from '../assets/btc/hero-house.jpg'
 import heroDetailOne from '../assets/btc/gallery-02.jpg'
 import heroDetailTwo from '../assets/btc/gallery-06.jpg'
+import ZoomableImage from './ZoomableImage'
 
 const trustPoints = ['Quality Workmanship', 'Free Site Advice', 'Fast Quotation']
 
@@ -55,20 +56,23 @@ function Hero() {
 
         <div className="fade-up relative min-h-[520px]">
           <div className="absolute -right-10 top-6 h-56 w-56 rounded-full bg-accentOrange/10" aria-hidden="true" />
-          <img
+          <ZoomableImage
             src={heroImage}
             alt="Completed modern residential construction by Better the Best Construction"
-            className="absolute right-0 top-0 h-[420px] w-[82%] animate-float rounded-[32px] object-cover shadow-2xl"
+            className="absolute right-0 top-0 h-[420px] w-[82%] animate-float rounded-[32px] shadow-2xl"
+            imageClassName="h-full w-full object-cover"
           />
-          <img
+          <ZoomableImage
             src={heroDetailOne}
             alt="Foundation preparation work at a construction site"
-            className="absolute bottom-12 left-0 h-64 w-[46%] rounded-[32px] border-8 border-white object-cover shadow-2xl"
+            className="absolute bottom-12 left-0 h-64 w-[46%] rounded-[32px] border-8 border-white shadow-2xl"
+            imageClassName="h-full w-full object-cover"
           />
-          <img
+          <ZoomableImage
             src={heroDetailTwo}
             alt="Finished home exterior with modern roof"
-            className="absolute bottom-0 right-8 h-44 w-[38%] rounded-[32px] border-8 border-white object-cover shadow-2xl"
+            className="absolute bottom-0 right-8 h-44 w-[38%] rounded-[32px] border-8 border-white shadow-2xl"
+            imageClassName="h-full w-full object-cover"
           />
           <div className="absolute left-8 top-12 rounded-3xl bg-darkGrey/95 p-6 text-white shadow-2xl">
             <p className="text-4xl font-extrabold">10+</p>

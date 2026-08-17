@@ -13,6 +13,7 @@ import gallery09 from '../assets/btc/gallery-09.jpg'
 import gallery10 from '../assets/btc/gallery-10.jpg'
 import gallery11 from '../assets/btc/gallery-11.jpg'
 import gallery12 from '../assets/btc/gallery-12.jpg'
+import ZoomableImage from './ZoomableImage'
 
 const projects = [
   {
@@ -67,12 +68,17 @@ function Projects() {
           {projects.map((project) => (
             <article key={project.title} className="fade-up group overflow-hidden rounded-3xl bg-white shadow-lg transition hover:-translate-y-[6px] hover:shadow-2xl">
               <div className="relative h-96 overflow-hidden">
-                <img src={project.image} alt={`${project.title} construction project`} className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-darkGrey/90 via-darkGrey/25 to-transparent" />
-                <span className="absolute left-5 top-5 rounded-2xl bg-accentOrange px-4 py-2 text-sm font-bold text-white shadow-lg">
+                <ZoomableImage
+                  src={project.image}
+                  alt={`${project.title} construction project`}
+                  className="h-full w-full"
+                  imageClassName="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-darkGrey/90 via-darkGrey/25 to-transparent" />
+                <span className="pointer-events-none absolute left-5 top-5 rounded-2xl bg-accentOrange px-4 py-2 text-sm font-bold text-white shadow-lg">
                   Completed Project
                 </span>
-                <div className="absolute bottom-0 left-0 right-0 p-7">
+                <div className="pointer-events-none absolute bottom-0 left-0 right-0 p-7">
                   <h3 className="text-2xl font-bold text-white">{project.title}</h3>
                   <p className="mt-2 font-semibold text-accentOrange">{project.location}</p>
                 </div>
@@ -97,7 +103,12 @@ function Projects() {
                 index === 0 || index === 7 ? 'md:col-span-2 md:row-span-2' : ''
               }`}
             >
-              <img src={image.src} alt={image.alt} className={`${index === 0 || index === 7 ? 'h-full min-h-[460px]' : 'h-56'} w-full object-cover transition duration-300 hover:scale-105`} />
+              <ZoomableImage
+                src={image.src}
+                alt={image.alt}
+                className={`${index === 0 || index === 7 ? 'h-full min-h-[460px]' : 'h-56'} w-full`}
+                imageClassName="h-full w-full object-cover transition duration-300 hover:scale-105"
+              />
             </figure>
           ))}
         </div>

@@ -1,6 +1,7 @@
 import { FiCheck } from 'react-icons/fi'
 import whyImage from '../assets/btc/why-interior.jpg'
 import galleryFive from '../assets/btc/gallery-05.jpg'
+import ZoomableImage from './ZoomableImage'
 
 const features = [
   'Experienced team',
@@ -16,10 +17,11 @@ function WhyChooseUs() {
     <section className="bg-darkGrey py-24">
       <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 md:grid-cols-2 lg:px-8">
         <div className="fade-up grid grid-cols-2 gap-4">
-          <img
+          <ZoomableImage
             src={whyImage}
             alt="Construction workers coordinating at a building site"
-            className="h-full min-h-80 rounded-3xl object-cover shadow-lg"
+            className="h-full min-h-80 rounded-3xl shadow-lg"
+            imageClassName="h-full w-full object-cover"
           />
           <div className="grid gap-4">
             <div className="rounded-3xl bg-darkGrey p-8 text-white shadow-lg">
@@ -30,10 +32,11 @@ function WhyChooseUs() {
               <p className="text-4xl font-extrabold text-accentOrange">98%</p>
               <p className="mt-2 font-semibold text-primaryGrey">Client Satisfaction</p>
             </div>
-            <img
+            <ZoomableImage
               src={galleryFive}
               alt="Stone masonry construction detail"
-              className="hidden h-40 rounded-3xl object-cover shadow-lg sm:block"
+              className="hidden h-40 rounded-3xl shadow-lg sm:block"
+              imageClassName="h-full w-full object-cover"
             />
           </div>
         </div>
