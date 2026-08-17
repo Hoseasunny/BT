@@ -6,8 +6,18 @@ const trustPoints = ['Quality Workmanship', 'Free Site Advice', 'Fast Quotation'
 
 function Hero() {
   return (
-    <section id="home" className="overflow-hidden bg-gradient-to-br from-white via-lightGrey to-white pt-24 sm:pt-28">
-      <div className="mx-auto grid min-h-[calc(100vh-96px)] max-w-[1280px] items-center gap-12 px-6 pb-20 pt-2 lg:grid-cols-[0.92fr_1.08fr] lg:px-8 lg:pb-24 lg:pt-4">
+    <section id="home" className="relative overflow-hidden bg-white pt-24 sm:pt-28">
+      <img
+        src={heroDetailOne}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover opacity-60"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-darkGrey/55" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-white/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-lightGrey/90 via-white/55 to-darkGrey/30" />
+
+      <div className="relative mx-auto grid min-h-[calc(100vh-96px)] max-w-[1280px] items-center gap-12 px-6 pb-20 pt-2 lg:grid-cols-[0.92fr_1.08fr] lg:px-8 lg:pb-24 lg:pt-4">
         <div className="fade-up">
           <p className="mb-5 inline-flex rounded-2xl bg-white px-5 py-2 text-sm font-semibold text-accentOrange shadow-lg">
             Trusted Construction & Renovation Experts
