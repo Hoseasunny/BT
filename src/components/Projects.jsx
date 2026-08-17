@@ -1,22 +1,53 @@
+import projectHouse from '../assets/btc/project-house.jpg'
+import projectOffice from '../assets/btc/project-office.jpg'
+import projectApartment from '../assets/btc/project-apartment.jpg'
+import gallery01 from '../assets/btc/gallery-01.jpg'
+import gallery02 from '../assets/btc/gallery-02.jpg'
+import gallery03 from '../assets/btc/gallery-03.jpg'
+import gallery04 from '../assets/btc/gallery-04.jpg'
+import gallery05 from '../assets/btc/gallery-05.jpg'
+import gallery06 from '../assets/btc/gallery-06.jpg'
+import gallery07 from '../assets/btc/gallery-07.jpg'
+import gallery08 from '../assets/btc/gallery-08.jpg'
+import gallery09 from '../assets/btc/gallery-09.jpg'
+import gallery10 from '../assets/btc/gallery-10.jpg'
+import gallery11 from '../assets/btc/gallery-11.jpg'
+import gallery12 from '../assets/btc/gallery-12.jpg'
+
 const projects = [
   {
     title: 'Modern Family House',
     location: 'Residential Estate',
     description: 'A clean modern home build with strong structural planning and premium finishes.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85',
+    image: projectHouse,
   },
   {
     title: 'Office Renovation',
     location: 'Business District',
     description: 'A commercial office upgrade focused on better workflow, lighting, and durability.',
-    image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85',
+    image: projectOffice,
   },
   {
     title: 'Apartment Finishing',
     location: 'Urban Apartments',
     description: 'Interior and exterior finishing completed with careful supervision and neat detail.',
-    image: 'https://images.unsplash.com/photo-1560184897-ae75f418493e?auto=format&fit=crop&w=900&q=85',
+    image: projectApartment,
   },
+]
+
+const galleryImages = [
+  { src: gallery01, alt: 'Concrete slab preparation at a construction site' },
+  { src: gallery02, alt: 'Foundation bedding and site preparation work' },
+  { src: gallery03, alt: 'Stone walling and plumbing installation work' },
+  { src: gallery04, alt: 'Completed residential house exterior' },
+  { src: gallery05, alt: 'Circular masonry structure in progress' },
+  { src: gallery06, alt: 'Finished residential building with red roof' },
+  { src: gallery07, alt: 'Gravel base preparation for a building foundation' },
+  { src: gallery08, alt: 'Completed family homes with modern roofing' },
+  { src: gallery09, alt: 'Interior finishing and partition construction' },
+  { src: gallery10, alt: 'Concrete drainage and structural site work' },
+  { src: gallery11, alt: 'Block wall construction with materials on site' },
+  { src: gallery12, alt: 'Small completed residential building exterior' },
 ]
 
 function Projects() {
@@ -48,6 +79,18 @@ function Projects() {
                 </a>
               </div>
             </article>
+          ))}
+        </div>
+        <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+          {galleryImages.map((image, index) => (
+            <figure
+              key={image.alt}
+              className={`fade-up overflow-hidden rounded-3xl shadow-lg ${
+                index === 0 || index === 7 ? 'md:col-span-2' : ''
+              }`}
+            >
+              <img src={image.src} alt={image.alt} className="h-56 w-full object-cover transition duration-300 hover:scale-105" />
+            </figure>
           ))}
         </div>
       </div>

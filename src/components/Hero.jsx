@@ -1,5 +1,4 @@
-const heroImage =
-  'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85'
+import heroImage from '../assets/btc/hero-house.jpg'
 
 function Hero() {
   return (

@@ -1,4 +1,6 @@
 import { FiCheck } from 'react-icons/fi'
+import whyImage from '../assets/btc/why-interior.jpg'
+import galleryFive from '../assets/btc/gallery-05.jpg'
 
 const features = [
   'Experienced team',
@@ -8,9 +10,6 @@ const features = [
   'Professional advice',
   'Customer-first approach',
 ]
-
-const whyImage =
-  'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85'
 
 function WhyChooseUs() {
   return (
@@ -31,6 +30,11 @@ function WhyChooseUs() {
               <p className="text-4xl font-extrabold text-accentOrange">98%</p>
               <p className="mt-2 font-semibold text-primaryGrey">Client Satisfaction</p>
             </div>
+            <img
+              src={galleryFive}
+              alt="Stone masonry construction detail"
+              className="hidden h-40 rounded-3xl object-cover shadow-lg sm:block"
+            />
           </div>
         </div>
         <div className="fade-up">

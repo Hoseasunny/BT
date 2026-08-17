@@ -1,4 +1,5 @@
 import { FiCheckCircle } from 'react-icons/fi'
+import aboutImage from '../assets/btc/about-site.jpg'
 
 const bullets = [
   'Residential construction',
@@ -7,9 +8,6 @@ const bullets = [
   'Construction consultation',
   'Quality workmanship',
 ]
-
-const aboutImage =
-  'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85'
 
 function About() {
   return (

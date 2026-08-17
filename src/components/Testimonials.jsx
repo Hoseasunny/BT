@@ -1,4 +1,7 @@
 import { FiStar } from 'react-icons/fi'
+import testimonialOne from '../assets/btc/testimonial-01.jpg'
+import testimonialTwo from '../assets/btc/testimonial-02.jpg'
+import testimonialThree from '../assets/btc/testimonial-03.jpg'
 
 const testimonials = [
   {
@@ -6,21 +9,21 @@ const testimonials = [
     type: 'House Renovation',
     review:
       'Better the Best Construction transformed our house beautifully. Their renovation advice and workmanship were outstanding.',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=85',
+    image: testimonialOne,
   },
   {
     name: 'Daniel Otieno',
     type: 'Commercial Construction',
     review:
       'The team handled our shop build with professionalism, transparent pricing, and dependable site supervision from start to finish.',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=85',
+    image: testimonialTwo,
   },
   {
     name: 'Miriam Achieng',
     type: 'Apartment Finishing',
     review:
       'Their finishing work was neat, timely, and exactly what we needed. The advice they gave helped us avoid costly mistakes.',
-    image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=300&q=85',
+    image: testimonialThree,
   },
 ]
 
