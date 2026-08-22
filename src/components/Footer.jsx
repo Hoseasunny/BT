@@ -24,9 +24,9 @@ function Footer() {
         <div>
           <h2 className="text-xl font-bold text-white">Contact Info</h2>
           <ul className="mt-5 grid gap-3 font-medium text-mediumGrey">
-            <li>Phone: +254 700 000 000</li>
-            <li>Email: info@betterthebestconstruction.com</li>
-            <li>WhatsApp: +254 700 000 000</li>
+            <li>Phone: 0714108413</li>
+            <li>Email: thomasmbui37@gmail.com</li>
+            <li>WhatsApp: 0714108413</li>
           </ul>
         </div>
       </div>

@@ -1,9 +1,9 @@
 import { FiClock, FiMail, FiMapPin, FiMessageCircle, FiPhone } from 'react-icons/fi'
 
 const details = [
-  { icon: FiPhone, label: 'Phone', value: '+254 700 000 000' },
-  { icon: FiMessageCircle, label: 'WhatsApp', value: '+254 700 000 000' },
-  { icon: FiMail, label: 'Email', value: 'info@betterthebestconstruction.com' },
+  { icon: FiPhone, label: 'Phone', value: '0714108413' },
+  { icon: FiMessageCircle, label: 'WhatsApp', value: '0714108413' },
+  { icon: FiMail, label: 'Email', value: 'thomasmbui37@gmail.com' },
   { icon: FiMapPin, label: 'Location', value: 'Nairobi, Kenya' },
   { icon: FiClock, label: 'Working hours', value: 'Monday - Saturday, 8:00 AM - 6:00 PM' },
 ]

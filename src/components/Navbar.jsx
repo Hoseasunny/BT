@@ -31,8 +31,12 @@ function Navbar() {
         className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4 lg:px-8"
         aria-label="Primary navigation"
       >
-        <a href="#home" className="text-lg font-extrabold text-darkGrey sm:text-xl">
-          Better the Best Construction
+        <a href="#home" className="inline-flex items-center" aria-label="Better the Best Construction logo">
+          <img
+            src="/btb-logo.jpeg"
+            alt="Better the Best Construction logo"
+            className="h-10 w-auto object-contain sm:h-12 lg:h-14"
+          />
         </a>
 
         <div className="hidden items-center gap-8 lg:flex">

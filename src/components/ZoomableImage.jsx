@@ -1,4 +1,11 @@
-function ZoomableImage({ src, alt, className = '', imageClassName = '' }) {
+function ZoomableImage({
+  src,
+  alt,
+  className = '',
+  imageClassName = '',
+  loading = 'lazy',
+  decoding = 'async',
+}) {
   const openImage = () => {
     window.dispatchEvent(
       new CustomEvent('open-image-lightbox', {
@@ -14,7 +21,7 @@ function ZoomableImage({ src, alt, className = '', imageClassName = '' }) {
       aria-label={`View larger image: ${alt}`}
       onClick={openImage}
     >
-      <img src={src} alt={alt} className={imageClassName} />
+      <img src={src} alt={alt} loading={loading} decoding={decoding} className={imageClassName} />
     </button>
   )
 }
