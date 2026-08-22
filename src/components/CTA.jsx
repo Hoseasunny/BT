@@ -22,7 +22,7 @@ function CTA() {
                 Request a Quote
               </a>
               <a
-                href="https://wa.me/"
+                href={`https://wa.me/${254714108413}?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20construction%20services.`}
                 className="rounded-2xl bg-white px-7 py-4 text-center font-semibold text-darkGrey shadow-lg transition hover:scale-[1.03] hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-4 focus:ring-offset-darkGrey"
               >
                 Chat on WhatsApp
