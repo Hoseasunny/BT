@@ -74,6 +74,8 @@ function App() {
         href="https://wa.me/254714108413"
         className="fixed bottom-5 right-5 z-40 inline-flex h-16 w-16 items-center justify-center rounded-full bg-accentOrange text-white shadow-2xl transition hover:scale-[1.03] focus:outline-none focus:ring-2 focus:ring-accentOrange focus:ring-offset-4"
         aria-label="Chat on WhatsApp"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <FiMessageCircle size={28} aria-hidden="true" />
       </a>

@@ -8,7 +8,35 @@ const details = [
   { icon: FiClock, label: 'Working hours', value: 'Monday - Saturday, 8:00 AM - 6:00 PM' },
 ]
 
+const whatsappNumber = '254716412155'
+
 function Contact() {
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    const formData = new FormData(event.currentTarget)
+    const fullName = formData.get('fullName')?.toString().trim() || 'Customer'
+    const phone = formData.get('phone')?.toString().trim() || 'Not provided'
+    const email = formData.get('email')?.toString().trim() || 'Not provided'
+    const service = formData.get('service')?.toString().trim() || 'Not specified'
+    const message = formData.get('message')?.toString().trim() || 'No additional details provided.'
+
+    const whatsappMessage = [
+      'Hello Better the Best Construction,',
+      '',
+      `Full Name: ${fullName}`,
+      `Phone Number: ${phone}`,
+      `Email: ${email}`,
+      `Service Needed: ${service}`,
+      '',
+      'Message:',
+      message,
+    ].join('\n')
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <section id="contact" className="bg-lightGrey py-24">
       <div className="mx-auto grid max-w-[1280px] gap-12 px-6 lg:grid-cols-2 lg:px-8">
@@ -38,7 +66,7 @@ function Contact() {
           </div>
         </div>
 
-        <form className="fade-up rounded-3xl bg-white p-6 shadow-lg sm:p-8">
+        <form className="fade-up rounded-3xl bg-white p-6 shadow-lg sm:p-8" onSubmit={handleSubmit}>
           <div className="grid gap-5">
             <label className="grid gap-2 font-semibold text-darkGrey">
               Full Name
@@ -47,6 +75,7 @@ function Contact() {
                 name="fullName"
                 className="rounded-2xl border border-mediumGrey px-4 py-3 font-medium text-primaryGrey outline-none transition focus:border-accentOrange focus:ring-2 focus:ring-accentOrange/30"
                 autoComplete="name"
+                required
               />
             </label>
             <label className="grid gap-2 font-semibold text-darkGrey">
@@ -56,6 +85,7 @@ function Contact() {
                 name="phone"
                 className="rounded-2xl border border-mediumGrey px-4 py-3 font-medium text-primaryGrey outline-none transition focus:border-accentOrange focus:ring-2 focus:ring-accentOrange/30"
                 autoComplete="tel"
+                required
               />
             </label>
             <label className="grid gap-2 font-semibold text-darkGrey">
@@ -65,6 +95,7 @@ function Contact() {
                 name="email"
                 className="rounded-2xl border border-mediumGrey px-4 py-3 font-medium text-primaryGrey outline-none transition focus:border-accentOrange focus:ring-2 focus:ring-accentOrange/30"
                 autoComplete="email"
+                required
               />
             </label>
             <label className="grid gap-2 font-semibold text-darkGrey">
@@ -87,10 +118,11 @@ function Contact() {
                 name="message"
                 rows="5"
                 className="resize-none rounded-2xl border border-mediumGrey px-4 py-3 font-medium text-primaryGrey outline-none transition focus:border-accentOrange focus:ring-2 focus:ring-accentOrange/30"
+                required
               />
             </label>
             <button
-              type="button"
+              type="submit"
               className="rounded-2xl bg-accentOrange px-7 py-4 font-semibold text-white shadow-lg transition hover:scale-[1.03] hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-accentOrange focus:ring-offset-4"
             >
               Send Message
