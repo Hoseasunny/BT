@@ -8,7 +8,7 @@ const details = [
   { icon: FiClock, label: 'Working hours', value: 'Monday - Saturday, 8:00 AM - 6:00 PM' },
 ]
 
-const whatsappNumber = '254716412155'
+const whatsappNumber = '254714108413' // Replace with your WhatsApp number in international format without the '+' sign
 
 function Contact() {
   const handleSubmit = (event) => {
